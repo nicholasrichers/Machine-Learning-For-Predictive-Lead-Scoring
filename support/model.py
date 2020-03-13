@@ -16,8 +16,7 @@ def build_tuned_model(name, base_model, X_train, y_train, hparams, scorer=None, 
   print('Best {} model: {}'.format(model.name, model.model))
   print('Best {} score: {:.3f}'.format(
     model.name,
-    model.results.sort_values('mean_test_score', ascending=False
-  ).head(1).mean_test_score.values[0]))
+    model.results.sort_values('mean_test_score', ascending=False).head(1).mean_test_score.values[0]))
 
   return model
 
